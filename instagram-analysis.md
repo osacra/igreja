@@ -102,3 +102,23 @@ A foto 01 é vertical, em 960×1280, e mostra um grupo de nove pessoas posando n
 A foto 02 é vertical, em 720×1280, e registra o louvor com violões, teclado e vocalista, sob a projeção “LIVRE, EU SOU LIVRE”. Ela tem energia, cor e contexto de culto; é excelente para a seção de louvor ou como imagem de apoio em “Cultos”. O enquadramento é mais apertado e possui cabos e equipamentos no primeiro plano, então funciona melhor como foto editorial/documental do que como fundo de texto. O brilho avermelhado da projeção pode reforçar a assinatura vermelha da IBIG.
 
 Até aqui, o acervo recebido já cobre duas necessidades importantes: uma imagem humana de comunidade e uma imagem de música/culto. Ainda será necessário identificar se as próximas fotos cobrem fachada, interior, EBD, jovens, MINIBIG, oração e eventos.
+
+## Primeiro acervo recebido — fotos 03 e 04
+
+A foto 03 é horizontal, em 1280×720, e mostra um grupo de sete jovens dentro do templo, fotografado de cima e em frente aos bancos. A composição é espontânea, com sensação de proximidade e convivência; funciona muito bem para o bloco “Jovens & Adoles” ou para uma seção de comunidade. O formato horizontal também oferece flexibilidade para cards e banners menores.
+
+A foto 04 é vertical, em 720×1280, e registra uma ação externa com crianças/adolescentes, microfone, cartaz escrito “JESUS ama você!!!” e o perfil da igreja. Ela é especialmente valiosa porque amplia a narrativa para fora do templo e mostra presença no bairro/comunidade. Pode ilustrar MINIBIG, ações missionais ou um bloco de “fé em movimento”. Por conter menores identificáveis, deve ser usada somente com autorização dos responsáveis; o cartaz possui forte caráter documental e não deve ser coberto por texto em um recorte principal.
+
+Com as fotos 01–04, o acervo já cobre comunidade adulta/equipe, louvor, jovens e uma ação externa com crianças. Ainda falta avaliar a foto 05 para saber se ela completa o conjunto com culto, interior, evento ou outro ministério.
+
+## Primeiro acervo recebido — foto 05
+
+A foto 05 é horizontal, em 1280×720, e mostra crianças, adolescentes e uma adulta com um bebê em um parque, segurando cartazes feitos à mão com mensagens como “Jesus ama você”, “Posso orar por você?” e referências bíblicas. É a imagem mais forte do conjunto para comunicar ação comunitária, evangelismo e presença fora do templo. Ela pode funcionar como destaque de MINIBIG/ação externa ou como uma seção de missão e comunidade na home.
+
+O enquadramento horizontal é excelente para uma faixa de narrativa ou banner; os cartazes têm bastante informação e devem permanecer visíveis, portanto o texto do site deve ficar fora da imagem. Por conter vários menores e um bebê identificáveis, a autorização dos responsáveis precisa estar confirmada para todos antes da publicação.
+
+## Seleção inicial recomendada
+
+Com as cinco fotos, a primeira versão já pode usar: foto 01 em “Quem somos/comunidade”; foto 02 em “Louvor”; foto 03 em “Jovens & Adoles”; foto 04 em “MINIBIG e ação externa”; e foto 05 como destaque de comunidade/serviço ou banner de uma seção sobre presença no bairro. A foto 05 é a melhor candidata para uma faixa horizontal ampla; a foto 02 é a melhor para um cartão vertical de louvor; e a foto 03 oferece o recorte horizontal mais flexível para uma área de ministério.
+
+O conjunto ainda não contém uma imagem dedicada da fachada ou do interior vazio da igreja, nem uma foto específica de EBD ou Círculo de Oração. Essas lacunas podem ser preenchidas quando a igreja enviar o próximo lote, sem impedir a construção inicial.
