@@ -32,6 +32,8 @@ const photos = {
   children: "/manus-storage/minibig-comunidade-ibig_fde17cfe.jpeg",
 };
 
+const officialLogo = "/manus-storage/igreja-logo-oficial-hd_c2b23679.png";
+
 const whatsappMessage = encodeURIComponent(
   "Olá! Vim pelo site da Igreja Batista Independente de Guarulhos e gostaria de saber mais."
 );
@@ -47,19 +49,14 @@ const schedule = [
 ];
 
 const ministries = [
-  { title: "EBD", eyebrow: "Aprender juntos", text: "Um espaço para crescer na Palavra, fazer perguntas e caminhar em comunidade.", image: photos.community, tone: "gold" },
+  { title: "Ministério de Louvor", eyebrow: "Servir com música", text: "Música, presença e serviço para conduzir a comunidade a celebrar e adorar juntos.", image: photos.worship, tone: "gold" },
   { title: "Jovens & Adoles", eyebrow: "Uma fé que se move", text: "Encontros com conversa, música, amizade e espaço para viver a fé no cotidiano.", image: photos.youth, tone: "dark" },
-  { title: "MINIBIG", eyebrow: "Para os pequenos", text: "Cuidado, alegria e histórias que ajudam crianças e famílias a pertencer.", image: photos.children, tone: "red" },
-  { title: "Louvor & oração", eyebrow: "Presença e cuidado", text: "Momentos para cantar, ouvir, agradecer e colocar a vida diante de Deus.", image: photos.worship, tone: "paper" },
+  { title: "MINIBIG", eyebrow: "Para os pequenos", text: "Cuidado, alegria e histórias que ajudam crianças e famílias a pertencer.", image: photos.outreach, tone: "red" },
+  { title: "EBD", eyebrow: "Aprender juntos", text: "Um espaço para crescer na Palavra, fazer perguntas e caminhar em comunidade.", image: null, tone: "paper" },
 ];
 
-function LogoMark({ light = false }: { light?: boolean }) {
-  return (
-    <span className={`logo-mark ${light ? "logo-mark--light" : ""}`} aria-hidden="true">
-      <span className="logo-mark__arc logo-mark__arc--one" />
-      <span className="logo-mark__arc logo-mark__arc--two" />
-    </span>
-  );
+function OfficialLogo({ className = "" }: { className?: string }) {
+  return <img className={`official-logo ${className}`} src={officialLogo} alt="IBIG — Igreja Batista Independente de Guarulhos" />;
 }
 
 export default function Home() {
@@ -84,8 +81,7 @@ export default function Home() {
     <div className="site-shell">
       <header className="site-header">
         <a className="brand" href="#inicio" onClick={() => scrollTo("inicio")} aria-label="IBIG — voltar ao início">
-          <LogoMark />
-          <span className="brand__type"><strong>IBIG</strong><small>IGREJA BATISTA<br />INDEPENDENTE DE GUARULHOS</small></span>
+          <OfficialLogo className="official-logo--header" />
         </a>
         <button className="mobile-menu" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}>
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -113,7 +109,7 @@ export default function Home() {
           </div>
           <div className="hero__visual">
             <div className="hero__image-wrap"><img src={photos.community} alt="Grupo de pessoas reunidas dentro da igreja" /><div className="hero__image-note">Comunidade<br /><strong>em movimento</strong></div></div>
-            <div className="hero__stamp"><LogoMark light /><span>Vem<br />como<br /><strong>você é</strong></span></div>
+            <div className="hero__stamp"><span className="hero__cross" aria-hidden="true">✝</span><span>Vem<br />como<br /><strong>você é</strong></span></div>
             <div className="hero__number">01 / 05</div>
           </div>
           <div className="hero__aside"><span>Próximo encontro</span><strong>DOM 18:30</strong><small>Culto da família<br />com oração e palavra</small><button onClick={() => scrollTo("encontros")} aria-label="Ver agenda"><ArrowDownRight size={24} /></button></div>
@@ -122,7 +118,7 @@ export default function Home() {
         <section className="statement" id="historia">
           <div className="section-label"><span>01</span><span>Uma comunidade presente</span></div>
           <div className="statement__grid"><h2>Fé que se encontra<br /><em>com a vida real.</em></h2><div><p>Na IBIG, a gente acredita que igreja é mais do que um lugar. É gente que se reúne para celebrar, aprender, orar, servir e abrir espaço para novas histórias.</p><button className="text-link text-link--dark" onClick={() => toast.info("A página completa sobre a história da IBIG será construída com o material da igreja.")}>Conheça nossa história <ArrowUpRight size={17} /></button></div></div>
-          <div className="statement__photo"><img src={photos.outreach} alt="Crianças e adolescentes participando de uma ação comunitária" /><div className="statement__photo-caption"><span>Fé que sai das paredes</span><strong>Presença no bairro, cuidado com as pessoas.</strong></div></div>
+          <div className="statement__photo"><img src={photos.children} alt="Crianças, adolescentes e famílias participando de uma ação comunitária" /><div className="statement__photo-caption"><span>Fé que sai das paredes</span><strong>Presença no bairro, cuidado com as pessoas.</strong></div></div>
         </section>
 
         <section className="schedule-section" id="encontros">
@@ -133,7 +129,7 @@ export default function Home() {
 
         <section className="ministries-section" id="ministerios">
           <div className="section-heading section-heading--light"><div><p className="kicker"><span /> Gente de todas as idades</p><h2>Tem espaço<br /><em>para todo mundo.</em></h2></div><p className="section-heading__note">Cada frente tem seu jeito de acolher, servir e construir vínculos. Descubra onde você se sente em casa.</p></div>
-          <div className="ministry-grid">{ministries.map((ministry, index) => <article className={`ministry-card ministry-card--${ministry.tone}`} key={ministry.title}><span className="ministry-card__number">0{index + 1} / IBIG</span><div className="ministry-card__image"><img src={ministry.image} alt="" /><span className="ministry-card__play"><Play size={14} fill="currentColor" /></span></div><div className="ministry-card__copy"><p>{ministry.eyebrow}</p><h3>{ministry.title}</h3><span>{ministry.text}</span><button onClick={() => toast.info(`Em breve: mais informações sobre ${ministry.title}.`)} aria-label={`Saiba mais sobre ${ministry.title}`}><ArrowUpRight size={18} /></button></div></article>)}</div>
+          <div className="ministry-grid">{ministries.map((ministry, index) => <article className={`ministry-card ministry-card--${ministry.tone}`} key={ministry.title}><span className="ministry-card__number">0{index + 1} / IBIG</span>{ministry.image ? <div className="ministry-card__image"><img src={ministry.image} alt="" /><span className="ministry-card__play"><Play size={14} fill="currentColor" /></span></div> : <div className="ministry-card__image ministry-card__image--empty"><span>Foto da EBD<br /><strong>em breve</strong></span></div>}<div className="ministry-card__copy"><p>{ministry.eyebrow}</p><h3>{ministry.title}</h3><span>{ministry.text}</span><button onClick={() => toast.info(`Em breve: mais informações sobre ${ministry.title}.`)} aria-label={`Saiba mais sobre ${ministry.title}`}><ArrowUpRight size={18} /></button></div></article>)}</div>
         </section>
 
         <section className="gallery-section">
@@ -148,7 +144,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="site-footer"><div className="footer-brand"><LogoMark light /><div><strong>IBIG</strong><span>Igreja Batista Independente<br />de Guarulhos</span></div></div><div className="footer-middle"><p>Há um lugar à mesa para você.</p><span>R. Augusto Calheiros, 124 — Guarulhos, SP</span></div><div className="footer-links"><a href="https://www.instagram.com/ibigru/" target="_blank" rel="noreferrer"><Instagram size={17} /> Instagram</a><a href={whatsappHref} target="_blank" rel="noreferrer"><MessageCircle size={17} /> WhatsApp</a></div><div className="footer-bottom"><span>© {new Date().getFullYear()} IBIG</span><span>Feito para uma comunidade viva.</span></div></footer>
+      <footer className="site-footer"><div className="footer-brand"><OfficialLogo className="official-logo--footer" /><div><strong>IBIG</strong><span>Igreja Batista Independente<br />de Guarulhos</span></div></div><div className="footer-middle"><p>Há um lugar à mesa para você.</p><span>R. Augusto Calheiros, 124 — Guarulhos, SP</span></div><div className="footer-links"><a href="https://www.instagram.com/ibigru/" target="_blank" rel="noreferrer"><Instagram size={17} /> Instagram</a><a href={whatsappHref} target="_blank" rel="noreferrer"><MessageCircle size={17} /> WhatsApp</a></div><div className="footer-bottom"><span>© {new Date().getFullYear()} IBIG</span><span>Feito para uma comunidade viva.</span></div></footer>
       <a className="floating-whatsapp" href={whatsappHref} target="_blank" rel="noreferrer" aria-label="Abrir WhatsApp"><MessageCircle size={23} /></a>
     </div>
   );

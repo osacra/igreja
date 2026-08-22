@@ -12,6 +12,10 @@
 - [x] Receber o primeiro acervo de fotos oficiais autorizadas pela igreja em arquivo ZIP.
 - [x] Extrair, catalogar e selecionar as cinco fotos iniciais para hero, ministérios, galeria e ação comunitária.
 - [ ] Confirmar nomes, descrições e faixas etárias dos ministérios antes da publicação.
+- [x] Substituir o símbolo criado pela logo oficial IBIG em alta definição.
+- [x] Corrigir o recorte da foto da seção de presença no bairro usando uma composição horizontal sem cortar rostos.
+- [x] Renomear o cartão anterior para Ministério de Louvor e deixar a EBD sem foto até receber material específico.
+
 - [x] Implementar formulário estático sem persistência de dados; o envio abre uma conversa no WhatsApp.
 - [x] Implementar botão flutuante e CTAs de WhatsApp; falta apenas substituir o link genérico pelo número oficial.
 - [x] Aplicar identidade visual IBIG com vermelho, preto, dourado, verde-musgo e apoio editorial em marfim.
