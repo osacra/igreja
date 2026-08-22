@@ -61,6 +61,10 @@
 .site-shell { overflow: hidden; background: #f5f1e9; }
 .site-header { height: 90px; padding: 0 5vw; display: flex; align-items: center; justify-content: space-between; position: absolute; z-index: 20; top: 0; width: 100%; color: #fffdf8; }
 .brand { display: flex; align-items: center; gap: 13px; }
+.official-logo { display: block; object-fit: contain; object-position: center; }
+.official-logo--header { width: 182px; height: 66px; padding: 5px 8px; background: #fffdf8; }
+.official-logo--footer { width: 160px; height: 74px; padding: 5px 8px; background: #fffdf8; opacity: .96; }
+
 .brand__type { display: flex; flex-direction: column; line-height: .84; }
 .brand__type strong { font-family: 'DM Serif Display', serif; font-size: 1.55rem; font-weight: 400; letter-spacing: -.08em; }
 
@@ -107,6 +111,8 @@ em { color: #c49c4e; font-weight: 400; }
 .hero__image-note strong { color: #c49c4e; }
 .hero__stamp { position: absolute; z-index: 3; left: -35px; top: 22%; width: 114px; height: 114px; border-radius: 100%; background: #b8272f; display: flex; flex-direction: column; justify-content: center; align-items: center; transform: rotate(-12deg); text-align: center; font-family: 'DM Serif Display', serif; font-size: 1rem; line-height: .9; }
 .hero__stamp .logo-mark { transform: scale(.52) rotate(-5deg); height: 26px; margin-bottom: -9px; }
+.hero__cross { color: #fffdf8; font-size: 1.35rem; line-height: 1; margin-bottom: 7px; }
+
 .hero__stamp span { color: #fffdf8; }
 .hero__number { position: absolute; left: 20px; top: -28px; font-size: .63rem; letter-spacing: .2em; color: #c49c4e; }
 .hero__aside { align-self: end; border-left: 1px solid #514a42; margin-left: 40px; padding: 20px 0 4px 20px; display: flex; flex-direction: column; gap: 8px; }
@@ -155,6 +161,11 @@ em { color: #c49c4e; font-weight: 400; }
 .ministry-card__number { position: absolute; z-index: 3; left: 17px; top: 17px; color: #fffdf8; font-size: .54rem; font-weight: 800; letter-spacing: .13em; mix-blend-mode: difference; }
 
 .ministry-card__image { height: 218px; position: relative; overflow: hidden; }
+.ministry-card__image--empty { display: flex; align-items: end; padding: 21px; background: linear-gradient(145deg, #ded0ae, #f5f1e9); }
+.ministry-card__image--empty:before { content: 'EBD'; position: absolute; top: 15px; right: 17px; font-family: 'DM Serif Display', serif; font-size: 4.5rem; color: #c49c4e; opacity: .42; }
+.ministry-card__image--empty span { position: relative; z-index: 2; color: #514c42; font-size: .65rem; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; line-height: 1.4; }
+.ministry-card__image--empty strong { color: #c85e3f; }
+
 .ministry-card__image img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease-out); filter: saturate(.78); }
 .ministry-card:hover img { transform: scale(1.05); }
 .ministry-card__play { position: absolute; right: 12px; top: 12px; width: 30px; height: 30px; border-radius: 50%; background: #fffdf8; display: grid; place-items: center; color: #b8272f; }
@@ -205,7 +216,7 @@ em { color: #c49c4e; font-weight: 400; }
 
 .site-footer { padding: 58px 8vw 28px; background: #1f2d29; color: #fffdf8; display: grid; grid-template-columns: 1.1fr 1fr .8fr; gap: 40px; position: relative; }
 .footer-brand { display: flex; gap: 13px; align-items: start; }
-.footer-brand > div { display: flex; flex-direction: column; }
+.footer-brand > div { display: none; }
 .footer-brand strong { font-size: 1.5rem; letter-spacing: -.08em; }
 .footer-brand span { color: #8f8a82; font-size: .57rem; line-height: 1.45; margin-top: 5px; }
 .footer-middle p { margin: 0 0 10px; font-family: 'DM Serif Display', serif; color: #c49c4e; font-size: 1.5rem; }
@@ -226,6 +237,8 @@ em { color: #c49c4e; font-weight: 400; }
 }
 @media (max-width: 720px) {
   .site-header { height: 75px; padding: 0 6vw; }
+  .official-logo--header { width: 140px; height: 52px; }
+
   .mobile-menu { display: block; z-index: 22; }
   .main-nav { display: none; position: absolute; top: 0; left: 0; right: 0; padding: 95px 7vw 35px; background: #171717; flex-direction: column; align-items: flex-start; gap: 23px; }
   .main-nav--open { display: flex; }
