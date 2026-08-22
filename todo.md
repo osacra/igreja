@@ -1,5 +1,9 @@
 # Próximas decisões e tarefas
 
+- [x] Diagnosticar por que os assets `/manus-storage/...` não são servidos no localhost.
+- [x] Implementar fallback local sem quebrar o preview/publicação.
+- [x] Validar todas as imagens, o build e sincronizar a correção.
+
 - [x] Remover do README a seção sobre Versionamento e GitHub.
 - [x] Reescrever o histórico público para eliminar esse conteúdo dos commits anteriores.
 - [x] Recriar e sincronizar o commit de documentação revisado.
