@@ -24,15 +24,18 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 
+const localAsset = (filename: string) => `https://raw.githubusercontent.com/osacra/igreja/main/local-assets/${filename}`;
+const asset = (storagePath: string, filename: string) => import.meta.env.DEV ? localAsset(filename) : storagePath;
+
 const photos = {
-  community: "/manus-storage/comunidade-ibig_1ce957e3.jpeg",
-  worship: "/manus-storage/louvor-ibig_3e5793f6.jpeg",
-  youth: "/manus-storage/jovens-ibig_edd035f9.jpeg",
-  outreach: "/manus-storage/minibig-acao-ibig_128a041f.jpeg",
-  children: "/manus-storage/minibig-comunidade-ibig_fde17cfe.jpeg",
+  community: asset("/manus-storage/comunidade-ibig_1ce957e3.jpeg", "comunidade-ibig.jpeg"),
+  worship: asset("/manus-storage/louvor-ibig_3e5793f6.jpeg", "louvor-ibig.jpeg"),
+  youth: asset("/manus-storage/jovens-ibig_edd035f9.jpeg", "jovens-ibig.jpeg"),
+  outreach: asset("/manus-storage/minibig-acao-ibig_128a041f.jpeg", "minibig-acao-ibig.jpeg"),
+  children: asset("/manus-storage/minibig-comunidade-ibig_fde17cfe.jpeg", "minibig-comunidade-ibig.jpeg"),
 };
 
-const officialLogo = "/manus-storage/igreja-logo-oficial-header_3d28e914.png";
+const officialLogo = asset("/manus-storage/igreja-logo-oficial-header_3d28e914.png", "igreja-logo-oficial-header.png");
 
 const whatsappMessage = encodeURIComponent(
   "Olá! Vim pelo site da Igreja Batista Independente de Guarulhos e gostaria de saber mais."
