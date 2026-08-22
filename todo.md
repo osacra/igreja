@@ -1,5 +1,8 @@
 # Próximas decisões e tarefas
 
+- [x] Substituir o README genérico por documentação específica do site IBIG.
+- [x] Documentar instalação, comandos, WhatsApp, fotos, GitHub e publicação.
+
 - [x] Criar o repositório `igreja` na conta GitHub do usuário.
 - [x] Tornar o repositório `igreja` público conforme solicitado.
 - [x] Consultar o nome e o e-mail associados à conta GitHub.
