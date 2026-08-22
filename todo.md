@@ -1,5 +1,9 @@
 # Próximas decisões e tarefas
 
+- [x] Remover do README a seção sobre Versionamento e GitHub.
+- [x] Reescrever o histórico público para eliminar esse conteúdo dos commits anteriores.
+- [x] Recriar e sincronizar o commit de documentação revisado.
+
 - [x] Substituir o README genérico por documentação específica do site IBIG.
 - [x] Documentar instalação, comandos, WhatsApp, fotos, GitHub e publicação.
 

@@ -140,27 +140,6 @@ Fotos com texto de cartaz, datas antigas, rostos cortados ou baixa resolução d
 
 Os horários e descrições dos encontros devem ser revisados pela liderança antes da publicação definitiva, principalmente quando houver mudança de programação.
 
-## Versionamento e GitHub
-
-O projeto é acompanhado no repositório público [osacra/igreja](https://github.com/osacra/igreja). Os marcos são sincronizados gradualmente conforme novas seções, fotos e correções são aprovadas.
-
-Os commits deste projeto devem usar a autoria configurada para a conta do proprietário do repositório:
-
-```bash
-git config user.name "Arthur Sacramento"
-git config user.email "sacrarthur06@gmail.com"
-```
-
-Para registrar uma alteração local:
-
-```bash
-git add .
-git commit -m "tipo: descreve a alteração"
-git push origin main
-```
-
-Issues e pull requests são opcionais. Para alterações simples de conteúdo e estilo, commits diretos são suficientes. Uma Issue ou Pull Request é recomendada quando uma tarefa exigir discussão, revisão separada, colaboração de várias pessoas ou acompanhamento de pendências.
-
 ## Publicação
 
 O site foi preparado para publicação estática. O preview e os checkpoints são gerenciados pelo ambiente do projeto, e a publicação deve ser feita pelo botão **Publish** da interface de gerenciamento após selecionar um checkpoint estável.
