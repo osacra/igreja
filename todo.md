@@ -14,6 +14,7 @@
 - [ ] Confirmar nomes, descrições e faixas etárias dos ministérios antes da publicação.
 - [x] Substituir o símbolo criado pela logo oficial IBIG em alta definição.
 - [x] Remover o fundo/caixa clara da logo e aplicar versão PNG transparente adequada ao fundo escuro.
+- [x] Aumentar a escala visual da logo no cabeçalho e no rodapé, mantendo a marca completa e alinhada.
 - [x] Corrigir o recorte da foto da seção de presença no bairro usando uma composição horizontal sem cortar rostos.
 - [x] Renomear o cartão anterior para Ministério de Louvor e deixar a EBD sem foto até receber material específico.
 

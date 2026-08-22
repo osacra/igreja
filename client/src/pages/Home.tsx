@@ -32,7 +32,7 @@ const photos = {
   children: "/manus-storage/minibig-comunidade-ibig_fde17cfe.jpeg",
 };
 
-const officialLogo = "/manus-storage/igreja-logo-oficial-branca-transparente_f0fdd8c1.png";
+const officialLogo = "/manus-storage/igreja-logo-oficial-header_3d28e914.png";
 
 const whatsappMessage = encodeURIComponent(
   "Olá! Vim pelo site da Igreja Batista Independente de Guarulhos e gostaria de saber mais."
