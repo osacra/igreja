@@ -28,14 +28,14 @@ const localAsset = (filename: string) => `https://raw.githubusercontent.com/osac
 const asset = (storagePath: string, filename: string) => import.meta.env.DEV ? localAsset(filename) : storagePath;
 
 const photos = {
-  community: asset("/manus-storage/comunidade-ibig_1ce957e3.jpeg", "comunidade-ibig.jpeg"),
-  worship: asset("/manus-storage/louvor-ibig_3e5793f6.jpeg", "louvor-ibig.jpeg"),
-  youth: asset("/manus-storage/jovens-ibig_edd035f9.jpeg", "jovens-ibig.jpeg"),
-  outreach: asset("/manus-storage/minibig-acao-ibig_128a041f.jpeg", "minibig-acao-ibig.jpeg"),
-  children: asset("/manus-storage/minibig-comunidade-ibig_fde17cfe.jpeg", "minibig-comunidade-ibig.jpeg"),
+  community: asset("/images/comunidade-ibig_1ce957e3.jpeg", "comunidade-ibig.jpeg"),
+  worship: asset("/images/louvor-ibig_3e5793f6.jpeg", "louvor-ibig.jpeg"),
+  youth: asset("/images/jovens-ibig_edd035f9.jpeg", "jovens-ibig.jpeg"),
+  outreach: asset("/images/minibig-acao-ibig_128a041f.jpeg", "minibig-acao-ibig.jpeg"),
+  children: asset("/images/minibig-comunidade-ibig_fde17cfe.jpeg", "minibig-comunidade-ibig.jpeg"),
 };
 
-const officialLogo = asset("/manus-storage/igreja-logo-oficial-header_3d28e914.png", "igreja-logo-oficial-header.png");
+const officialLogo = asset("/images/igreja-logo-oficial-header_3d28e914.png", "igreja-logo-oficial-header.png");
 
 const whatsappMessage = encodeURIComponent(
   "Olá! Vim pelo site da Igreja Batista Independente de Guarulhos e gostaria de saber mais."
