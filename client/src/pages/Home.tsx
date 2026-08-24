@@ -24,18 +24,17 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 
-const localAsset = (filename: string) => `https://raw.githubusercontent.com/osacra/igreja/main/local-assets/${filename}`;
-const asset = (storagePath: string, filename: string) => import.meta.env.DEV ? localAsset(filename) : storagePath;
+const asset = (filename: string) => `/local-assets/${filename}`;
 
 const photos = {
-  community: asset("/images/comunidade-ibig_1ce957e3.jpeg", "comunidade-ibig.jpeg"),
-  worship: asset("/images/louvor-ibig_3e5793f6.jpeg", "louvor-ibig.jpeg"),
-  youth: asset("/images/jovens-ibig_edd035f9.jpeg", "jovens-ibig.jpeg"),
-  outreach: asset("/images/minibig-acao-ibig_128a041f.jpeg", "minibig-acao-ibig.jpeg"),
-  children: asset("/images/minibig-comunidade-ibig_fde17cfe.jpeg", "minibig-comunidade-ibig.jpeg"),
+  community: asset("comunidade-ibig.jpeg"),
+  worship: asset("louvor-ibig.jpeg"),
+  youth: asset("jovens-ibig.jpeg"),
+  outreach: asset("minibig-acao-ibig.jpeg"),
+  children: asset("minibig-comunidade-ibig.jpeg"),
 };
 
-const officialLogo = asset("/images/igreja-logo-oficial-header_3d28e914.png", "igreja-logo-oficial-header.png");
+const officialLogo = asset("igreja-logo-oficial-header.png");
 
 const whatsappMessage = encodeURIComponent(
   "Olá! Vim pelo site da Igreja Batista Independente de Guarulhos e gostaria de saber mais."
