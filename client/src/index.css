@@ -185,17 +185,22 @@ em { color: #c49c4e; font-weight: 400; }
 .ministry-card--paper { background: #f5f1e9; }
 
 .gallery-section { padding: 120px 8vw 100px; background: #f5f1e9; }
-.gallery-grid { display: grid; grid-template-columns: 1.15fr .75fr .75fr; gap: 13px; margin: 60px 4vw 30px; height: 470px; }
-.gallery-grid > div { position: relative; overflow: hidden; }
-.gallery-grid img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.8); transition: transform .5s var(--ease-out); }
-.gallery-grid > div:hover img { transform: scale(1.04); }
-.gallery-grid__large { grid-row: span 2; }
-.gallery-grid__large span, .gallery-grid__small--two span { position: absolute; z-index: 2; left: 21px; bottom: 21px; color: #fffdf8; font-family: 'DM Serif Display', serif; font-size: 1.9rem; line-height: .92; }
-.gallery-grid__large span strong, .gallery-grid__small--two span strong { color: #c49c4e; font-weight: 400; }
-.gallery-grid__large:after, .gallery-grid__small--two:after { content:''; position: absolute; inset: 0; background: linear-gradient(0deg, #171717b8, transparent 65%); }
-.gallery-grid__small--two span { color: #171717; font-size: 1.5rem; }
-.gallery-grid__small--two strong { color: #b8272f !important; }
-.gallery-grid__small--two:after { background: linear-gradient(0deg, #17171735, transparent 60%); }
+.gallery-heading { margin-bottom: 56px; }
+.gallery-heading .section-heading__note { max-width: 310px; }
+.photo-wall { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 230px; gap: 12px; margin: 0 4vw 30px; }
+.gallery-card { position: relative; overflow: hidden; min-height: 0; background: #2f5147; }
+.gallery-card--hero { grid-column: span 2; grid-row: span 2; }
+.gallery-card--tall { grid-column: span 1; grid-row: span 2; }
+.gallery-card--wide { grid-column: span 1; }
+.gallery-card img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.78) contrast(1.02); transition: transform .5s var(--ease-out), filter .4s ease; }
+.gallery-card:hover img { transform: scale(1.06); filter: saturate(.98) contrast(1.02); }
+.gallery-card:after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, #171717b8 0%, transparent 56%); pointer-events: none; }
+.gallery-card__overlay { position: absolute; z-index: 2; inset: auto 17px 17px; display: grid; grid-template-columns: 25px 1fr; gap: 10px; align-items: end; }
+.gallery-card__overlay > span { color: #e6bf83; font: 400 1.1rem 'DM Serif Display', serif; }
+.gallery-card__overlay small { display: block; margin-bottom: 5px; color: #e6bf83; font-size: .5rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.gallery-card__overlay h3 { max-width: 250px; margin: 0; color: #fffdf8; font: 400 .96rem/1.02 'DM Serif Display', serif; }
+.gallery-card--hero .gallery-card__overlay h3 { font-size: 1.75rem; }
+.gallery-card__overlay h3 strong { color: #e6bf83; font-weight: 400; }
 .gallery-footer { display: flex; justify-content: space-between; align-items: end; margin: 0 4vw; }
 .gallery-footer p { font-family: 'DM Serif Display', serif; font-size: 1.7rem; line-height: 1; margin: 0; }
 .gallery-footer em { color: #b8272f; }
@@ -253,7 +258,7 @@ em { color: #c49c4e; font-weight: 400; }
   .hero__stamp { left: auto; right: 10px; top: -32px; width: 86px; height: 86px; font-size: .77rem; }
   .hero__image-note { display: none; }
   .hero__number { top: -20px; left: 0; }
-  .statement, .schedule-section, .ministries-section, .gallery-section { padding: 82px 6vw; }
+  .statement, .schedule-section, .ministries-section, .gallery-section, .moments-section { padding: 82px 6vw; }
   .statement__grid, .contact-section { grid-template-columns: 1fr; gap: 32px; margin-top: 40px; }
   .statement__photo { margin-left: 0; height: 280px; }
   .statement__photo-caption strong { font-size: 1.45rem; }
@@ -268,11 +273,12 @@ em { color: #c49c4e; font-weight: 400; }
   .schedule-footer { flex-direction: column; align-items: flex-start; gap: 16px; }
   .ministry-grid { grid-template-columns: 1fr; gap: 14px; }
   .ministry-card { min-height: 410px; }
-  .gallery-grid { grid-template-columns: 1fr 1fr; height: 450px; margin: 45px 0 27px; gap: 9px; }
-  .gallery-grid__large { grid-row: span 2; }
-  .gallery-grid__small--one { height: 220px; }
-  .gallery-grid__small--two { height: 220px; }
-  .gallery-grid__large span, .gallery-grid__small--two span { left: 13px; bottom: 14px; font-size: 1.35rem; }
+  .photo-wall { grid-template-columns: 1fr 1fr; grid-template-rows: 220px 180px 180px 180px; margin: 0 0 27px; gap: 9px; }
+  .gallery-card--hero { grid-column: span 2; grid-row: span 1; }
+  .gallery-card--tall { grid-column: span 1; grid-row: span 1; }
+  .gallery-card--wide { grid-column: span 2; }
+  .gallery-card__overlay { inset: auto 12px 12px; grid-template-columns: 20px 1fr; gap: 7px; }
+  .gallery-card__overlay h3 { font-size: 1.08rem; }
   .gallery-footer { flex-direction: column; align-items: flex-start; gap: 25px; margin: 0; }
   .contact-section { padding: 82px 6vw; gap: 44px; }
   .contact-section h2 { font-size: clamp(3.5rem, 15vw, 5rem); }

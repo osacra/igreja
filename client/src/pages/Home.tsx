@@ -35,6 +35,11 @@ const photos = {
   cinema: asset("cinema-minibig.jpeg"),
   ebf3: asset("ebf3.jpeg"),
   ebd: asset("ebd.jpeg"),
+  adolescents: asset("adolescentes.jpeg"),
+  women: asset("evento-mulheres.jpeg"),
+  choir: asset("coral.jpeg"),
+  worshipNight: asset("culto2.jpeg"),
+  childrenClass: asset("ebf.jpeg"),
 };
 
 const officialLogo = asset("igreja-logo-oficial-header.png");
@@ -58,6 +63,17 @@ const ministries = [
   { title: "Jovens & Adoles", eyebrow: "Uma fé que se move", text: "Encontros com conversa, música, amizade e espaço para viver a fé no cotidiano.", image: photos.youth, tone: "dark" },
   { title: "MINIBIG", eyebrow: "Para os pequenos", text: "Cuidado, alegria e histórias que ajudam crianças e famílias a pertencer.", image: photos.outreach, tone: "red" },
   { title: "EBD", eyebrow: "Aprender juntos", text: "Um espaço para crescer na Palavra, fazer perguntas e caminhar em comunidade.", image: photos.ebd, tone: "paper" },
+];
+
+const galleryItems = [
+  { title: "Louvor é resposta.", emphasis: "É presença.", detail: "Ministério de Louvor", image: photos.worship, alt: "Equipe de louvor durante o culto", size: "gallery-card--hero" },
+  { title: "Uma juventude que caminha.", emphasis: "", detail: "Jovens IBIG", image: photos.youth, alt: "Grupo de jovens reunidos no templo", size: "gallery-card--tall" },
+  { title: "Histórias que continuam.", emphasis: "", detail: "MINIBIG", image: photos.ebf3, alt: "Famílias e crianças reunidas na igreja", size: "gallery-card--wide" },
+  { title: "Mulheres que caminham juntas.", emphasis: "", detail: "Encontro de mulheres", image: photos.women, alt: "Mulheres reunidas em um encontro da igreja", size: "" },
+  { title: "Uma geração presente.", emphasis: "", detail: "Adolescentes IBIG", image: photos.adolescents, alt: "Adolescentes participando de uma atividade da igreja", size: "" },
+  { title: "Vozes em harmonia.", emphasis: "", detail: "Coral IBIG", image: photos.choir, alt: "Coral da igreja durante uma apresentação", size: "" },
+  { title: "Oração que reúne.", emphasis: "", detail: "Culto e comunhão", image: photos.worshipNight, alt: "Pessoas reunidas durante o culto", size: "" },
+  { title: "Alegria para aprender.", emphasis: "", detail: "Escola Bíblica de Férias", image: photos.childrenClass, alt: "Crianças participando da Escola Bíblica de Férias", size: "gallery-card--wide" },
 ];
 
 function OfficialLogo({ className = "" }: { className?: string }) {
@@ -95,6 +111,7 @@ export default function Home() {
           <button onClick={() => scrollTo("encontros")}>Encontros</button>
           <button onClick={() => scrollTo("ministerios")}>Ministérios</button>
           <button onClick={() => scrollTo("historia")}>Nossa igreja</button>
+          <button onClick={() => scrollTo("galeria")}>Galeria</button>
           <button onClick={() => scrollTo("contato")}>Contato</button>
           <a className="nav-cta" href={whatsappHref} target="_blank" rel="noreferrer"><MessageCircle size={16} /> Falar com a gente</a>
         </nav>
@@ -137,9 +154,9 @@ export default function Home() {
           <div className="ministry-grid">{ministries.map((ministry, index) => <article className={`ministry-card ministry-card--${ministry.tone}`} key={ministry.title}><span className="ministry-card__number">0{index + 1} / IBIG</span>{ministry.image ? <div className="ministry-card__image"><img src={ministry.image} alt="" /><span className="ministry-card__play"><Play size={14} fill="currentColor" /></span></div> : <div className="ministry-card__image ministry-card__image--empty"><span>Foto da EBD<br /><strong>em breve</strong></span></div>}<div className="ministry-card__copy"><p>{ministry.eyebrow}</p><h3>{ministry.title}</h3><span>{ministry.text}</span><button onClick={() => toast.info(`Em breve: mais informações sobre ${ministry.title}.`)} aria-label={`Saiba mais sobre ${ministry.title}`}><ArrowUpRight size={18} /></button></div></article>)}</div>
         </section>
 
-        <section className="gallery-section">
-          <div className="section-label"><span>03</span><span>Um pouco do que vivemos</span></div>
-          <div className="gallery-grid"><div className="gallery-grid__large"><img src={photos.worship} alt="Equipe de louvor durante o culto" /><span>Louvor é resposta.<br /><strong>É presença.</strong></span></div><div className="gallery-grid__small gallery-grid__small--one"><img src={photos.youth} alt="Grupo de jovens reunidos no templo" /></div><div className="gallery-grid__small gallery-grid__small--two"><img src={photos.ebf3} alt="Famílias e crianças reunidas na igreja" /><span>Histórias<br /><strong>que continuam</strong></span></div></div>
+        <section className="gallery-section" id="galeria">
+          <div className="section-heading gallery-heading"><div><p className="kicker"><span /> Fotos da comunidade</p><h2>Um pouco do que<br /><em>vivemos juntos.</em></h2></div><p className="section-heading__note">Cultos, encontros, ensaios e momentos que revelam uma igreja viva, feita de pessoas e histórias compartilhadas.</p></div>
+          <div className="photo-wall">{galleryItems.map((item, index) => <article className={`gallery-card ${item.size}`} key={item.title}><img src={item.image} alt={item.alt} loading="lazy" /><div className="gallery-card__overlay"><span>0{index + 1}</span><div><small>{item.detail}</small><h3>{item.title}{item.emphasis && <><br /><strong>{item.emphasis}</strong></>}</h3></div></div></article>)}</div>
           <div className="gallery-footer"><p>Registros reais, encontros reais.<br /><em>É assim que a IBIG acontece.</em></p><a href="https://www.instagram.com/ibigru/" target="_blank" rel="noreferrer"><Instagram size={19} /> Acompanhe no Instagram <ArrowUpRight size={16} /></a></div>
         </section>
 
