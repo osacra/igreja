@@ -32,6 +32,9 @@ const photos = {
   youth: asset("jovens-ibig.jpeg"),
   outreach: asset("minibig-acao-ibig.jpeg"),
   children: asset("minibig-comunidade-ibig.jpeg"),
+  cinema: asset("cinema-minibig.jpeg"),
+  ebf3: asset("ebf3.jpeg"),
+  ebd: asset("ebd.jpeg"),
 };
 
 const officialLogo = asset("igreja-logo-oficial-header.png");
@@ -54,7 +57,7 @@ const ministries = [
   { title: "Ministério de Louvor", eyebrow: "Servir com música", text: "Música, presença e serviço para conduzir a comunidade a celebrar e adorar juntos.", image: photos.worship, tone: "gold" },
   { title: "Jovens & Adoles", eyebrow: "Uma fé que se move", text: "Encontros com conversa, música, amizade e espaço para viver a fé no cotidiano.", image: photos.youth, tone: "dark" },
   { title: "MINIBIG", eyebrow: "Para os pequenos", text: "Cuidado, alegria e histórias que ajudam crianças e famílias a pertencer.", image: photos.outreach, tone: "red" },
-  { title: "EBD", eyebrow: "Aprender juntos", text: "Um espaço para crescer na Palavra, fazer perguntas e caminhar em comunidade.", image: null, tone: "paper" },
+  { title: "EBD", eyebrow: "Aprender juntos", text: "Um espaço para crescer na Palavra, fazer perguntas e caminhar em comunidade.", image: photos.ebd, tone: "paper" },
 ];
 
 function OfficialLogo({ className = "" }: { className?: string }) {
@@ -110,7 +113,7 @@ export default function Home() {
             <div className="hero__meta"><span><MapPin size={15} /> Guarulhos, SP</span><span><Sparkles size={15} /> Desde 1986</span></div>
           </div>
           <div className="hero__visual">
-            <div className="hero__image-wrap"><img src={photos.community} alt="Grupo de pessoas reunidas dentro da igreja" /><div className="hero__image-note">Comunidade<br /><strong>em movimento</strong></div></div>
+            <div className="hero__image-wrap"><img src={photos.cinema} alt="Grupo de pessoas reunidas dentro da igreja" /><div className="hero__image-note">Comunidade<br /><strong>em movimento</strong></div></div>
             <div className="hero__stamp"><span className="hero__cross" aria-hidden="true">✝</span><span>Vem<br />como<br /><strong>você é</strong></span></div>
             <div className="hero__number">01 / 05</div>
           </div>
@@ -136,7 +139,7 @@ export default function Home() {
 
         <section className="gallery-section">
           <div className="section-label"><span>03</span><span>Um pouco do que vivemos</span></div>
-          <div className="gallery-grid"><div className="gallery-grid__large"><img src={photos.worship} alt="Equipe de louvor durante o culto" /><span>Louvor é resposta.<br /><strong>É presença.</strong></span></div><div className="gallery-grid__small gallery-grid__small--one"><img src={photos.youth} alt="Grupo de jovens reunidos no templo" /></div><div className="gallery-grid__small gallery-grid__small--two"><img src={photos.children} alt="Famílias e crianças reunidas na igreja" /><span>Histórias<br /><strong>que continuam</strong></span></div></div>
+          <div className="gallery-grid"><div className="gallery-grid__large"><img src={photos.worship} alt="Equipe de louvor durante o culto" /><span>Louvor é resposta.<br /><strong>É presença.</strong></span></div><div className="gallery-grid__small gallery-grid__small--one"><img src={photos.youth} alt="Grupo de jovens reunidos no templo" /></div><div className="gallery-grid__small gallery-grid__small--two"><img src={photos.ebf3} alt="Famílias e crianças reunidas na igreja" /><span>Histórias<br /><strong>que continuam</strong></span></div></div>
           <div className="gallery-footer"><p>Registros reais, encontros reais.<br /><em>É assim que a IBIG acontece.</em></p><a href="https://www.instagram.com/ibigru/" target="_blank" rel="noreferrer"><Instagram size={19} /> Acompanhe no Instagram <ArrowUpRight size={16} /></a></div>
         </section>
 
