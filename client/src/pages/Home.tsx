@@ -35,6 +35,11 @@ const photos = {
   cinema: asset("cinema-minibig.jpeg"),
   ebf3: asset("ebf3.jpeg"),
   ebd: asset("ebd.jpeg"),
+  adolescents: asset("adolescentes.jpeg"),
+  women: asset("evento-mulheres.jpeg"),
+  choir: asset("coral.jpeg"),
+  worshipNight: asset("culto2.jpeg"),
+  childrenClass: asset("ebf.jpeg"),
 };
 
 const officialLogo = asset("igreja-logo-oficial-header.png");
@@ -58,6 +63,14 @@ const ministries = [
   { title: "Jovens & Adoles", eyebrow: "Uma fé que se move", text: "Encontros com conversa, música, amizade e espaço para viver a fé no cotidiano.", image: photos.youth, tone: "dark" },
   { title: "MINIBIG", eyebrow: "Para os pequenos", text: "Cuidado, alegria e histórias que ajudam crianças e famílias a pertencer.", image: photos.outreach, tone: "red" },
   { title: "EBD", eyebrow: "Aprender juntos", text: "Um espaço para crescer na Palavra, fazer perguntas e caminhar em comunidade.", image: photos.ebd, tone: "paper" },
+];
+
+const communityMoments = [
+  { title: "Mulheres que caminham juntas", detail: "Encontro de mulheres", image: photos.women },
+  { title: "Uma geração presente", detail: "Adolescentes IBIG", image: photos.adolescents },
+  { title: "Vozes em harmonia", detail: "Coral IBIG", image: photos.choir },
+  { title: "Oração que reúne", detail: "Culto e comunhão", image: photos.worshipNight },
+  { title: "Alegria para aprender", detail: "Escola Bíblica de Férias", image: photos.childrenClass },
 ];
 
 function OfficialLogo({ className = "" }: { className?: string }) {
@@ -95,6 +108,7 @@ export default function Home() {
           <button onClick={() => scrollTo("encontros")}>Encontros</button>
           <button onClick={() => scrollTo("ministerios")}>Ministérios</button>
           <button onClick={() => scrollTo("historia")}>Nossa igreja</button>
+          <button onClick={() => scrollTo("vivencias")}>Vivências</button>
           <button onClick={() => scrollTo("contato")}>Contato</button>
           <a className="nav-cta" href={whatsappHref} target="_blank" rel="noreferrer"><MessageCircle size={16} /> Falar com a gente</a>
         </nav>
@@ -141,6 +155,11 @@ export default function Home() {
           <div className="section-label"><span>03</span><span>Um pouco do que vivemos</span></div>
           <div className="gallery-grid"><div className="gallery-grid__large"><img src={photos.worship} alt="Equipe de louvor durante o culto" /><span>Louvor é resposta.<br /><strong>É presença.</strong></span></div><div className="gallery-grid__small gallery-grid__small--one"><img src={photos.youth} alt="Grupo de jovens reunidos no templo" /></div><div className="gallery-grid__small gallery-grid__small--two"><img src={photos.ebf3} alt="Famílias e crianças reunidas na igreja" /><span>Histórias<br /><strong>que continuam</strong></span></div></div>
           <div className="gallery-footer"><p>Registros reais, encontros reais.<br /><em>É assim que a IBIG acontece.</em></p><a href="https://www.instagram.com/ibigru/" target="_blank" rel="noreferrer"><Instagram size={19} /> Acompanhe no Instagram <ArrowUpRight size={16} /></a></div>
+        </section>
+
+        <section className="moments-section" id="vivencias">
+          <div className="section-heading moments-heading"><div><p className="kicker"><span /> Além do domingo</p><h2>Uma igreja<br /><em>em movimento.</em></h2></div><p className="section-heading__note">A vida da IBIG acontece em muitos ritmos: no culto, na sala de aula, no ensaio e nas amizades que nascem pelo caminho.</p></div>
+          <div className="moments-grid">{communityMoments.map((moment, index) => <article className={`moment-card moment-card--${index + 1}`} key={moment.title}><img src={moment.image} alt={moment.title} loading="lazy" /><div className="moment-card__overlay"><span>0{index + 1}</span><div><small>{moment.detail}</small><h3>{moment.title}</h3></div><ArrowUpRight size={18} /></div></article>)}</div>
         </section>
 
         <section className="contact-section" id="contato">
