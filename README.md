@@ -4,6 +4,10 @@ Site institucional da **Igreja Batista Independente de Guarulhos**, desenvolvido
 
 > **Status:** primeira versão visual em desenvolvimento contínuo.
 
+## Deploy
+
+Acesse a aplicação: https://oarthursacra.netlify.app/
+
 ## Visão geral
 
 O projeto segue uma direção editorial e comunitária, com a identidade da IBIG em vermelho, preto, dourado e verde-musgo. A página inicial combina fotografia documental, tipografia editorial e blocos assimétricos para comunicar acolhimento, presença no bairro e participação comunitária.
